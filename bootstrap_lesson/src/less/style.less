@@ -7,11 +7,10 @@ body {
 }
 .nav {
   &__wrapper {
-    padding: 5rem 0 0 0 ;
-    margin-left: -10em;
+    padding: 5rem 0 0 1rem ;
+    margin-left: 1rem;
   }
   &__wrap {
-    padding-left: 3rem;
     &_invisible {
       display: none;
     }
@@ -25,7 +24,7 @@ body {
   position: relative;
   display: inline-block;
   height: 2rem;
-  margin: 0 2rem 0 -4rem;
+  margin: 0 8rem 0 -8rem;
   white-space: nowrap;
   background: #fff;
     &_link {
@@ -65,7 +64,7 @@ body {
   }
 }
 .nav__input+.nav__item {
-  padding: 0 0 0 0.6rem;
+  padding: 0 0 0 1.3rem;
 }
 .nav__input:checked + .nav__item + .nav__wrap {
   position: absolute;
@@ -95,6 +94,16 @@ body {
 }
 .nav__input:checked+.nav__paranja {
      display: none;
+}
+@media (max-width: 998px) {
+  .nav {
+    &__wrapper {
+      margin-left: 0;
+    }
+    &__item {
+      margin: 0 0 0 -4rem;
+    }
+  }
 }
 @media (max-width: 650px) {
   .nav {
