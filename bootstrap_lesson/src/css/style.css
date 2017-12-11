@@ -1,18 +1,16 @@
 html {
-  font-size: 21px;
+  font-size: 18px;
 }
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
 }
-.nav {
-  display: inline-block;
-  position: relative;
-  height: 1rem;
-  margin: 1rem 0 1rem;
+.nav__wrapper {
+  padding: 5rem 0 0 0 ;
+  margin-left: -10em;
 }
 .nav__wrap {
-  padding: 0 0 1rem;
+  padding-left: 3rem;
 }
 .nav__wrap_invisible {
   display: none;
@@ -26,7 +24,7 @@ body {
   position: relative;
   display: inline-block;
   height: 2rem;
-  margin: 0 2rem 0 -3rem;
+  margin: 0 2rem 0 -4rem;
   white-space: nowrap;
   background: #fff;
 }
@@ -63,7 +61,7 @@ body {
   background: rgba(0, 0, 0, 0);
 }
 .nav__input + .nav__item {
-  padding: 0 0 0 2.6rem;
+  padding: 0 0 0 0.6rem;
 }
 .nav__input:checked + .nav__item + .nav__wrap {
   position: absolute;
@@ -72,8 +70,7 @@ body {
   z-index: 999;
   background: #FFF;
   background: rgba(255, 255, 255, 0.95);
-  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8), 0 2px 15px rgba(0, 0, 0, 0.7);
-          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8), 0 2px 15px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8), 0 2px 15px rgba(0, 0, 0, 0.7);
   border-radius: 0.2rem;
 }
 .nav__input:checked ~ .nav__wrap .nav__item {
@@ -95,11 +92,14 @@ body {
 .nav__input:checked + .nav__paranja {
   display: none;
 }
-@media (max-width: 1110px) {
+@media (max-width: 650px) {
+  .nav__wrap {
+    padding-left: 1rem;
+  }
   .nav__wrap_invisible {
     display: block;
   }
   .nav__input + .nav__item {
-    padding: 0 0 0 1.659rem;
+    padding: 0 0 0 0.5rem;
   }
 }
