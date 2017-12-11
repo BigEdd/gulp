@@ -1,0 +1,105 @@
+html {
+  font-size: 21px;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+.nav {
+  display: inline-block;
+  position: relative;
+  height: 1rem;
+  margin: 1rem 0 1rem;
+}
+.nav__wrap {
+  padding: 0 0 1rem;
+}
+.nav__wrap_invisible {
+  display: none;
+}
+.nav__in {
+  height: 2rem;
+  padding: 0 0 0 3rem;
+  overflow: hidden;
+}
+.nav__item {
+  position: relative;
+  display: inline-block;
+  height: 2rem;
+  margin: 0 2rem 0 -3rem;
+  white-space: nowrap;
+  background: #fff;
+}
+.nav__item_link:link,
+.nav__item_link:visited {
+  margin: 0 1rem 0 0;
+  color: #229FCB;
+}
+.nav__input {
+  position: fixed;
+  top: 0;
+  left: -5rem;
+}
+.nav__label {
+  position: absolute;
+  cursor: pointer;
+  color: #229FCB;
+}
+.nav__label:after {
+  content: "▼";
+  position: absolute;
+  padding: 0 0 0 0.1rem;
+  margin: 0.3rem 0 0;
+  font-size: 80%;
+  text-decoration: none;
+}
+.nav__paranja {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0);
+}
+.nav__input + .nav__item {
+  padding: 0 0 0 2.6rem;
+}
+.nav__input:checked + .nav__item + .nav__wrap {
+  position: absolute;
+  top: 2rem;
+  right: 0.14rem ;
+  z-index: 999;
+  background: #FFF;
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8), 0 2px 15px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.8), 0 2px 15px rgba(0, 0, 0, 0.7);
+  border-radius: 0.2rem;
+}
+.nav__input:checked ~ .nav__wrap .nav__item {
+  display: block;
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+.nav__input:checked ~ .nav__wrap .nav__item_link {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  line-height: 1.25;
+  background: none;
+}
+.nav__input:checked ~ .nav__wrap .nav__label {
+  display: none;
+}
+.nav__input:checked + .nav__paranja {
+  display: none;
+}
+@media (max-width: 1110px) {
+  .nav__wrap_invisible {
+    display: block;
+  }
+  .nav__input + .nav__item {
+    padding: 0 0 0 1.659rem;
+  }
+}
